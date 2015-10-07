@@ -1,0 +1,72 @@
+<div class="container">
+    <div align="right">
+        <button class="btn btn-info" ng-click="addPerson()"> Add New Person </button>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="person in persons">
+            <td>{$ person.id $} </td>
+            <td>{$ person.first_name $} </td>
+            <td>{$ person.last_name $} </td>
+            <td>{$ person.email $} </td>
+            <td>{$ person.age $} </td>
+            <td>
+                <span class="glyphicon glyphicon-edit padding5" tooltip="Edit" ng-click="editPerson(person)"></span>
+                <span class="glyphicon glyphicon-trash padding5" tooltip="Delete" ng-click="deletePerson(person.id)"></span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <script type="text/ng-template" id="deleteModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Delete Person</h3>
+        </div>
+        <div class="modal-body">
+            <span>Do you really want to delete this person ?</span>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+
+
+    <script type="text/ng-template" id="addModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Add Person</h3>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label>First Name :</label>
+                <input type="text" class="form-control" ng-model="model.first_name">
+            </div>
+            <div class="form-group">
+                <label>Last Name :</label>
+                <input type="text" class="form-control" ng-model="model.last_name">
+            </div>
+            <div class="form-group">
+                <label>Email :</label>
+                <input type="text" class="form-control" ng-model="model.email">
+            </div>
+            <div class="form-group">
+                <label>Age :</label>
+                <input type="text" class="form-control" ng-model="model.age">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="save()">Save</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+</div>

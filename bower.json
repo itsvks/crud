@@ -1,0 +1,26 @@
+{
+  "name": "crud",
+  "version": "1.0.0",
+  "authors": [
+    "vikas shil <vikas.shil@goibibo.com>"
+  ],
+  "description": "crud",
+  "main": "",
+  "moduleType": [],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.6",
+    "bootstrap": "~3.3.5",
+    "angular-ui-router": "ui-router#~0.2.15",
+    "angular-bootstrap": "~0.13.4"
+  }
+}
