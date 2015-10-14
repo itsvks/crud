@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('crud', [ 'ui.router', 'ui.bootstrap']);
+var app = angular.module('django-angular-crud', [ 'ui.router', 'ui.bootstrap']);
 
 
 // Used for configuring the interpolation markup. Defaults to {{ and }}.
